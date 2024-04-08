@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+
+  #div {
+    height: 150px;
+    width: 150px;
+    background-color: hotpink;
+    border: 15px hotpink;
+    font-family: system-ui;
+    font-style: italic;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+  }
+}
