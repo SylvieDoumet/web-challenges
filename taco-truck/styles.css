@@ -1,0 +1,17 @@
+/* -------------------------------------------------------- */
+/* You will need to add more imports eventually.
+/* -------------------------------------------------------- */
+
+@import "./theme.css";
+@import "./header.css";
+@import "./main.css";
+@import "./cards.css";
+
+/* ------------------------------------------------------------------------------ */
+/* You don't need to edit the code for the * universal selector and the body.
+/* ------------------------------------------------------------------------------ */
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
