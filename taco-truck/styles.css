@@ -1,0 +1,97 @@
+/* -------------------------------------------------------- */
+/* You will need to add more imports eventually.
+/* -------------------------------------------------------- */
+
+@import "./theme.css";
+
+/* ------------------------------------------------------------------------------ */
+/* You don't need to edit the code for the * universal selector and the body.
+/* ------------------------------------------------------------------------------ */
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  columns: 1fr 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+  font-family: system-ui;
+  background: var(--body-bg);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  padding: 10px 20px;
+  background: var(--header-bg);
+  color: var(--header-text);
+}
+
+main {
+  gap: 20px;
+  padding: 20px;
+  background: var(--main-bg);
+  color: var(--main-text);
+}
+
+menu {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 20px;
+  padding: 10px;
+  background: var(--main-title-bg);
+  color: var(--main-text);
+}
+
+.meal {
+  width: 20%;
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  grid-template-rows: repeat (3, 1fr);
+  grid-column-gap: var(--gap);
+  grid-row-gap: var(--gap) * 4;
+  background: var(--card-bg);
+  color: var(--card-text);
+  list-style: none;
+  border-radius: 5px;
+}
+
+.--beeftacos {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.--chickenburrito {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.--quesadilla {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.--shrimptacos {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.--Asada {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.--StreetCorn {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
