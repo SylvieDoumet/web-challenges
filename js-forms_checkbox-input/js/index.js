@@ -12,15 +12,19 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
+tosCheckbox.addEventListener("change", () => {
+  if (tosCheckbox.checked) {
+    hideTosError();
+    else showTosError();
+  }
+});
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  if (tosCheckbox.checked === false) {
-    showTosError();
-    return;
+  if (!tosCheckbox.checked) {
+    return showTosError();
   }
-
-  hideTosError();
 
   alert("Form submitted");
 });
