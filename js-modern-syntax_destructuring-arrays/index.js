@@ -10,24 +10,14 @@ const item = ["Egg", 0.25, 12];
 
 // ?? export const [1,2,3] = item;
 
-const { name, price, quantity } = item;
+export const [name, price, quantity] = item;
 
 // EXERCISE 2
 // Use array destructuring to extract the variables "firstNameOfChris", "lastNameOfChris" and "ageOfChris".
 
 const personChris = [12, "Chris", "Owen"];
 
-const firstNameOfChris = personChris[1];
-
-const lastNameofChris = personChris[2];
-
-const ageOfChris = personChris[0];
-
-console.log(firstNameOfChris);
-
-console.log(lastNameofChris);
-
-console.log(ageOfChris);
+export const [ageOfChris, firstNameOfChrist, LastNameOfChris] = personChris;
 
 // EXERCISE 3
 // Use array destructuring to extract the variables "firstNameOfAlex" and "lastNameOfAlex".
@@ -35,9 +25,7 @@ console.log(ageOfChris);
 
 const personAlex = ["Alex", 12, "Main"];
 
-const firstNameOfAlex = personAlex[0];
-
-const lastNameOfAlex = personAlex[2];
+export const [firstNameOfAlex, , lastNameOfAlex] = personAlex;
 
 // EXERCISE 4
 // Use array destructuring to extract the last name from the array
@@ -45,7 +33,7 @@ const lastNameOfAlex = personAlex[2];
 
 const students = ["Christina", "Jon", "Alexandare"];
 
-const lastName = students[2];
+export const [, , lastName] = students;
 
 // EXERCISE 5
 // Use array destructuring to extract all of the names from this nested array.
