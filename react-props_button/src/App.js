@@ -97,53 +97,40 @@ import "./styles.css";
 //   );
 // }
 
+// 4. Pass a function as prop
 
-
-//  - - - - -- - - - -- - - Stand 12.44 Uhr 
-
-
-4. Pass a function as prop 
-
+// Move the handleClick function from the button component to the App component
 
 function Button({ color, disabled, text, onClick }) {
-
-const handleClick = () => {
-if (onClick) {
-  onClick();
-}
-};
-
-// Define a handleClick function 
-
-const handleClick = (message) => {
-  console.log(message); 
-}
-
-// Change onClick={handleClick} to onClick={() => handleCLick('Button Clicked!')}
-
   return (
-    <Button style={{ color: color }} disabled={disabled} handleCLick('Button Clicked!')}/>
+    <button style={{ color: color }} disabled={disabled} onClick={onCLick}>
       {text}
     </button>
   );
 }
 
-// No changes needed 
+// in the app component - pass the handleClick function as prop onClick to the Button component.
+// Receive the onClick prop as parameter in the Button component.
+// Pass the received to the given onCLick prop.
 
 export default function App() {
+  const handleClick = (message) => {
+    console.log(message);
+  };
+
   return (
     <>
       <Button
         color="red"
         disabled={false}
         text="Click in case of Danger!"
-        onClick={() => console.log("Button Clicked!")}
+        onClick={() => handleClick("Button Clicked!")}
       />
       <Button
         color="green"
         disabled={false}
         text="Click in case of Safety!"
-        onClick={() => console.log("Button Clicked!")}
+        onClick={() => handleClick("Button Clicked!")}
       />
     </>
   );
