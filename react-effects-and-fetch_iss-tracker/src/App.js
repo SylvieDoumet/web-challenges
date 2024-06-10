@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Controls from "./components/Controls";
 import Map from "./components/Map";
 import "./styles.css";
@@ -36,7 +36,9 @@ export default function App() {
     // Einfügen einer Intervall Funktion die alle 5 Sekunden einen fetch ausführt
 
     const intervalId = setInterval(getISSCoords, 5000);
-  });
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <main>
