@@ -1,7 +1,7 @@
 // import von useLocalStorageState und .utils einfügen
 
 import useLocalStorageState from "use-local-storage-state";
-import { getD6Roll } from "./utlis";
+import { getD6Roll } from "./utils";
 
 import { D6Button } from "./components/D6Button";
 import History from "./components/History";
