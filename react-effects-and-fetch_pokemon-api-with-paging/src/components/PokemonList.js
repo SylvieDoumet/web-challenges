@@ -5,7 +5,7 @@ export default function PokemonList() {
 
   // Ersetze die state Variable  const [offset, setOffset] = useState(0) von Schritt 1 durch URL basierte state Variable
 
-  const [setNextURL, setNextURL] = useState(null);
+  const [nextUrl, setNextUrl] = useState(null);
   const [previousUrl, setPreviousUrl] = useState(null);
 
   // Stelle die HTML reference von loadPokemon vorran und referiere mit url darauf
@@ -35,7 +35,7 @@ export default function PokemonList() {
 
       // Füge eine set-Function für Next und Previous URL ein
 
-      setNextURL(data.next);
+      setNextUrl(data.next);
       setPreviousUrl(data.previous);
     } catch (error) {
       console.log(error);
