@@ -41,10 +41,12 @@ export const [, , lastName] = students;
 
 const nestedStudents = ["Chris", ["Ahmad", "Antigoni"], ["Toby", "Sam"]];
 
-function showStudents(...nestedStudents) {
-  console.log(nestedstudents);
-  return `firstnames of students: ${nestedstudents.join(",")}.`;
-}
+export const [student1, [student2, student3], [student4,student5]] = nestedStudents; 
+
+  // function showStudents(...nestedStudents) {
+  //   console.log(nestedstudents);
+  //   return `firstnames of students: ${nestedstudents.join(",")}.`;
+  // }
 
 // EXERCISE 6
 // Spread the values of the values array into the function call of the add function.
@@ -59,3 +61,8 @@ function add(...values) {
     (previousValue, currentValue) => previousValue + currentValue
   );
 }
+
+
+// Eckige Klammern bei const (Ex 2) da es sich um arrays handelt 
+
+// Geschweifte Klammern bei const (Ex.1) da es sich um Objekte handelt 
