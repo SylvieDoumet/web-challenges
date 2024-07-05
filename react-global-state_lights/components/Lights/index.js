@@ -20,7 +20,12 @@ export default function Lights({ lights, toggleLight }) {
           <Light
             name={light.name}
             isOn={light.isOn}
-            onToggle={toggleLight(light.id)}
+            // onToggle={toggleLight(light.id)}
+            // This is incorrect because it calls the function immediately.
+            // Instead, we need to pass a function that calls the function.
+            // This is called a "callback" function:
+
+            onToggle={() => toggleLight(light.id)}
           />
         </li>
       ))}

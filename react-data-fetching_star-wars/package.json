@@ -1,5 +1,5 @@
 {
-  "name": "react-data-fetching_iss-tracker",
+  "name": "react-data-fetching_star-wars",
   "version": "0.0.0-unreleased",
   "private": true,
   "scripts": {
@@ -28,7 +28,7 @@
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0"
   },
-  "description": "React Data Fetching: ISS Tracker",
+  "description": "React Data Fetching: Star Wars",
   "nf": {
     "template": "next"
   }

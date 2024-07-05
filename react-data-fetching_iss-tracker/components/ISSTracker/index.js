@@ -28,11 +28,7 @@ export default function ISSTracker() {
   return (
     <main>
       <Map longitude={longitude} latitude={latitude} />
-      <Controls
-        longitude={longitude}
-        latitude={latitude}
-        onRefresh={mutate} // Use mutate to refetch data on button click
-      />
+      <Controls longitude={longitude} latitude={latitude} onRefresh={mutate} />
     </main>
   );
 }

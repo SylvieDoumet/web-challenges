@@ -5,6 +5,10 @@ import {
 } from "./Controls.styled";
 
 export default function Controls({ longitude, latitude, onRefresh }) {
+  if (longitude === undefined || latitude === undefined) {
+    return <ControlsContainer>Loading...</ControlsContainer>;
+  }
+
   return (
     <ControlsContainer>
       <ControlsDisplay>Lat: {longitude.toFixed(5)}</ControlsDisplay>
